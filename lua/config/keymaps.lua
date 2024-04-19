@@ -49,7 +49,6 @@ map("n", "<Left>", ":bprevious<CR>", opts)
 -- map ; to resume last search
 -- map("n", ";", "<cmd>Telescope resume<cr>", opts)
 
--- HAVE TO CHANGE THIS LATER
 -- search current buffer
 map("n", "<C-z>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
 
@@ -74,6 +73,10 @@ map("n", "<C-k>", ":wincmd k<CR>", opts)
 map("n", "<C-j>", ":wincmd j<CR>", opts)
 map("n", "<C-h>", ":wincmd h<CR>", opts)
 map("n", "<C-l>", ":wincmd l<CR>", opts)
+
+-- Map enter to ciw in normal mode
+map("n", "<CR>", "ciw", opts)
+map("n", "<BS>", "ci", opts)
 
 -- Move Lines
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })

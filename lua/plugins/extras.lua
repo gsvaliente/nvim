@@ -29,13 +29,19 @@ return {
   -- comments
   {
     "numToStr/Comment.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    opts = {},
+    config = function()
+      require("Comment").setup({
+        pre_hook = function()
+          return vim.bo.commentstring
+        end,
+      })
+    end,
     lazy = false,
+    dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+      "nvim-treesitter/nvim-treesitter",
+    },
   },
-  -- useful when there are embedded languages in certain types of files (e.g. Vue or React)
-  { "joosepalviste/nvim-ts-context-commentstring", lazy = true },
-
   -- Neovim plugin to improve the default vim.ui interfaces
   {
     "stevearc/dressing.nvim",
