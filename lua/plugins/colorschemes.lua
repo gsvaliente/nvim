@@ -214,11 +214,13 @@ return {
               TSNone = { fg = colors.text },
               TSNumber = { fg = colors.mauve },
               TSOperator = { fg = colors.peach },
-              TSParameter = { fg = colors.text },
-              TSParameterReference = { fg = colors.text },
+              -- changed this to check if the variables change color
+              TSParameter = { fg = colors.yellow },
+              TSParameterReference = { fg = colors.yellow },
               TSPreProc = { link = "PreProc" },
               TSProperty = { fg = colors.blue },
-              TSPunctBracket = { fg = colors.text },
+              -- this changes the color of the brackets
+              TSPunctBracket = { fg = colors.maroon },
               TSPunctDelimiter = { link = "Delimiter" },
               TSPunctSpecial = { fg = colors.blue },
               TSRepeat = { fg = colors.red },
